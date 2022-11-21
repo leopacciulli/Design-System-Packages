@@ -27,9 +27,10 @@
   },
   "dependencies": {
     "@react-ds/eslint-config": "*",
-    "@react-ds/ts-config": "*",
     "@react-ds/react": "*",
     "@react-ds/tokens": "*",
+    "@react-ds/ts-config": "*",
+    "phosphor-react": "^1.4.1",
     "polished": "^4.2.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"

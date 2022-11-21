@@ -1,22 +1,50 @@
 import type { StoryObj, Meta } from '@storybook/react'
-import { Button } from '@react-ds/react'
+import { Button, ButtonProps } from '@react-ds/react'
+import { ArrowRight } from 'phosphor-react'
 
 export default {
-  title: 'Button',
+  title: 'Form/Button',
   component: Button,
   args: {
-    children: 'Button',
+    children: 'Send',
   },
-} as Meta
+} as Meta<ButtonProps>
 
-export const Primary: StoryObj = {
+export const Primary: StoryObj<ButtonProps> = {}
+
+export const Secondary: StoryObj<ButtonProps> = {
   args: {
-    children: 'Button Primary',
+    variant: 'secondary',
+    children: 'Create new',
   },
 }
 
-export const Secondary: StoryObj = {
+export const Tertiary: StoryObj<ButtonProps> = {
   args: {
-    children: 'Button Secondary',
+    variant: 'tertiary',
+    children: 'Cancel',
+  },
+}
+
+export const Small: StoryObj<ButtonProps> = {
+  args: {
+    size: 'sm',
+  },
+}
+
+export const Disabled: StoryObj<ButtonProps> = {
+  args: {
+    disabled: true,
+  },
+}
+
+export const WithIcon: StoryObj<ButtonProps> = {
+  args: {
+    children: (
+      <>
+        Próximo Passo
+        <ArrowRight weight="bold" />
+      </>
+    ),
   },
 }
