@@ -137,6 +137,7 @@ var Box = styled("div", {
   backgroundColor: "$gray800",
   border: "1px solid $gray600"
 });
+Box.displayName = "Box";
 
 // src/components/Text.tsx
 var Text = styled("p", {
@@ -165,6 +166,7 @@ var Text = styled("p", {
     size: "md"
   }
 });
+Text.displayName = "Text";
 
 // src/components/Heading.tsx
 var Heading = styled("h2", {
@@ -188,6 +190,7 @@ var Heading = styled("h2", {
     size: "md"
   }
 });
+Heading.displayName = "Heading";
 
 // src/components/Avatar/styles.ts
 import * as Avatar from "@radix-ui/react-avatar";
@@ -232,9 +235,10 @@ var Avatar2 = (props) => {
     ]
   });
 };
+Avatar2.displayName = "Avatar";
 
 // src/components/Button.tsx
-var Button = styled("div", {
+var Button = styled("button", {
   all: "unset",
   borderRadius: "$sm",
   fontSize: "$sm",
@@ -271,12 +275,12 @@ var Button = styled("div", {
         color: "$ignite300",
         border: "2px solid $ignite500",
         "&:not(:disabled):hover": {
-          background: "$ignite300",
+          background: "$ignite500",
           color: "$white"
         },
         "&:disabled": {
           color: "$gray200",
-          backgroundColor: "$gray200"
+          borderColor: "$gray200"
         }
       },
       tertiary: {
@@ -285,8 +289,7 @@ var Button = styled("div", {
           color: "$white"
         },
         "&:disabled": {
-          color: "$gray600",
-          backgroundColor: "$gray600"
+          color: "$gray600"
         }
       }
     },
@@ -306,6 +309,7 @@ var Button = styled("div", {
     size: "md"
   }
 });
+Button.displayName = "Button";
 
 // src/components/TextInput/styles.ts
 var TextInputContainer = styled("div", {
@@ -362,6 +366,7 @@ var TextInput = (_a) => {
     ]
   });
 };
+TextInput.displayName = "TextInput";
 
 // src/components/TextArea.tsx
 var TextArea = styled("textarea", {
@@ -388,6 +393,7 @@ var TextArea = styled("textarea", {
     color: "$gray400"
   }
 });
+TextArea.displayName = "TextArea";
 
 // src/components/Checkbox/index.tsx
 import { Check } from "phosphor-react";
@@ -454,6 +460,7 @@ var Checkbox2 = (props) => {
     })
   }));
 };
+Checkbox2.displayName = "Checkbox";
 
 // src/components/MultiStep/styles.ts
 var MultiStepContainer = styled("div", {});
@@ -506,6 +513,7 @@ function MultiStep({ size, currentStep = 1 }) {
     ]
   });
 }
+MultiStep.displayName = "MultiStep";
 export {
   Avatar2 as Avatar,
   Box,

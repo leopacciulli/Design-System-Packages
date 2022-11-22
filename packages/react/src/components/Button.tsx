@@ -1,7 +1,7 @@
 import { ComponentProps, ElementType } from 'react'
 import { styled } from '../styles'
 
-export const Button = styled('div', {
+export const Button = styled('button', {
   all: 'unset',
   borderRadius: '$sm',
   fontSize: '$sm',
@@ -46,13 +46,13 @@ export const Button = styled('div', {
         border: '2px solid $ignite500',
 
         '&:not(:disabled):hover': {
-          background: '$ignite300',
+          background: '$ignite500',
           color: '$white',
         },
 
         '&:disabled': {
           color: '$gray200',
-          backgroundColor: '$gray200',
+          borderColor: '$gray200',
         },
       },
 
@@ -65,7 +65,6 @@ export const Button = styled('div', {
 
         '&:disabled': {
           color: '$gray600',
-          backgroundColor: '$gray600',
         },
       },
     },
@@ -92,3 +91,5 @@ export const Button = styled('div', {
 export interface ButtonProps extends ComponentProps<typeof Button> {
   as?: ElementType
 }
+
+Button.displayName = 'Button'
